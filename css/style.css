@@ -1,0 +1,242 @@
+/* Averages calculator v2.0 by Ruytter Torres - 10/out/2020
+linkedin.com/ruytertorres*/
+
+/* background */
+
+body, html {
+    background: url(../img/calc.png),
+                url(../img/number.png),
+                linear-gradient(50deg, #463F92, #1AC2EA);
+    background-attachment: fixed;
+    height:100%;
+}
+
+
+/* botões */
+
+.botoes {
+    border: 1px solid transparent;
+    display:block;
+    font-weight: 400;
+    text-align: center;
+    transition-duration: 0.5s;
+    height:38px;
+}
+
+.bt-azul {
+    background:#2146B5;
+    color:#fff;
+}
+
+.bt-azul:hover{
+    border:1px solid rgba(0, 123, 255, 0.473);
+    background:#007bff;
+    color:#fff;
+}
+
+
+
+/* Paragrafos */
+h1 {
+    padding:10px;
+    color: #2146B5;
+}
+
+h5 {
+    font-size:14px;
+}
+
+h6 {
+    font-size: 9px;
+    color: #2146B5;
+}
+
+h6, h5{
+    padding: 10px;
+    margin: 0;
+}
+
+/* Bordas */
+
+div>input.b-azul {
+    border: 1px solid  #2146B5;
+    border-radius: 4px;
+}
+
+div>input.b-azul:hover {
+    box-shadow: 0 0 7.5px #007bff!important;
+}
+
+#bUm.b-azul{
+    border-top-right-radius:0!important ;
+    border-bottom-right-radius:0!important ;
+}
+
+#bDois.b-azul, #bTres.b-azul {
+    border-radius:0!important ;
+    border-radius:0!important ;
+}
+
+#bQuatro.b-azul{
+    border-top-left-radius:0!important ;
+    border-bottom-left-radius:0!important ;
+}
+
+.b-azulResult {
+    border:1px solid #2146B5 ;
+    border-radius: 4px;
+    text-align: center;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    height:35px;
+}
+
+/* Animação do subtitulo */
+
+#animarSubTitulo {
+    animation: pisca 0.5s 1s infinite alternate;
+    -webkit-animation: pisca 0.5s 1s infinite alternate;
+}
+@keyframes pisca {
+
+    from{
+         color:  #dc3545;
+    }
+    to{
+         color: 007bff;
+    }
+}
+
+/* media query */
+
+ /* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) { 
+    
+    /* Paragrafo */
+    
+    h1{
+        text-align: center;
+    }
+
+    /* Estrutura do layout */
+
+    #cabecalhoXs{
+
+        position: fixed;
+        top: 130px;
+        border-top-right-radius: 10px ;
+        border-top-left-radius: 10px;
+        box-shadow: -5px 6px 5px #000;
+        padding-top:40px;
+        height: 135px;
+        border:1px solid #007bff;
+        border-bottom:none;
+        background-color: #2146B5;
+        background-image: url(../img/calc-white.png);
+    }
+
+    #fundoInputC{
+
+        position: fixed;
+        top: 255px;
+        background:#fff;
+        padding:50px;
+        margin-top:10px;
+        display: block;
+        border:1px solid #007bff;
+        border-top:none;
+        border-bottom-right-radius: 5px ;
+        border-bottom-left-radius: 5px ;
+        box-shadow: -5px 5px 5px #000;
+    }
+
+    .autorXs{
+        position:absolute;
+        bottom:0;
+        right:0;
+    }
+
+}
+
+/* // Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) { 
+    h1 {
+        font-size:1.7em;
+    }
+
+    #cabecalhoSm-md {
+
+        top: 120px;
+        background:#2146B5;
+        padding-top:40px;
+        border: 1px solid transparent;
+        border-right:none;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+        height:250px;
+        /* top: 95px;
+        box-shadow: 7px 5px 5px #000; */
+    }
+    
+
+    #fundoInputB{
+
+        top: 120px;
+        background:#fff;
+        border:1px solid #007bff;
+        border-top-right-radius: 5px ;
+        border-bottom-right-radius: 5px ;
+        height:250px;
+       /* box-shadow: -5px 5px 5px #000;
+        top: 95px; */
+    } 
+ }
+
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) { 
+    h1 {
+        font-size:2.3em; 
+    }
+
+    #cabecalhoSm-md {
+
+        background:#2146B5;
+        padding-top:40px;
+        border: 1px solid transparent;
+        border-right:none;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+        top: 95px;
+        box-shadow: 7px 5px 5px #000;
+    }
+
+    #div2 {
+        padding-top:32px;
+    }
+ }
+
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) { 
+    h1 {
+        font-size:2.8em;
+    }
+    #div2 {
+        padding-top:60px;
+    }
+     h5 {
+        font-size:1em;
+    }
+}
+
+/* // Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { 
+    h1 {
+        font-size:3em;
+    }
+
+    h5 {
+        font-size:1.2em;
+    }
+ }
