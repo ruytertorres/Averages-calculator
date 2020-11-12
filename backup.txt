@@ -1,0 +1,19 @@
+        <main class="d-none d-sm-block">
+            <div id="containerPg3">
+                <div id="bgf3">
+                    a
+                    <div>
+                        <iframe src="docs/ruytertorres.pdf" width="640" height="480"></iframe>
+                    </div>                      
+                </div>
+            </div>
+        </main>
+        <section class="d-sm-none">
+            <div id="containerPg2r">
+                <div id="bgfr">
+                    <div>
+                        <iframe id="port" src="docs/ruyterTorres.pdf" width="640" height="480"></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>

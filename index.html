@@ -12,16 +12,14 @@ linkedin.com/ruytertorres-->
      </head>
      <body>
           <section id="navabar">
-               <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
-                    <a href="" class="navbar-brand">averages Calculator</a>
+               <nav id="linkPrincipal" class="navbar navbar-expand-sm navbar-dark bg-dark">
+                    <a href="index.html" class="navbar-brand">averages Calculator</a>
                     <button class="navbar-toggler" data-toggle="collapse" data-target="#nav-target">
                          <span class="navbar-toggler-icon"></span>
                     </button>
-                    <div class="collapse navbar-collapse" id="nav-target">
+                    <div class="collapse navbar-collapse linksMenu" id="nav-target">
                          <ul class="nav-bar nav ml-auto">
-                              <li class="nav-item"><a href="" class="nav-link">a</a></li>
-                              <li class="nav-item"><a href="" class="nav-link">b</a></li>
-                              <li class="nav-item"><a href="" class="nav-link">c</a></li>
+                              <li class="nav-item"><a href="page2.html" class="nav-link">Tecnologia Empregada</a></li>
                          </ul>
                     </div>                          
                </nav>
@@ -29,47 +27,77 @@ linkedin.com/ruytertorres-->
           <section id="container"><!--MAIN-->
                <section id="xsConfig" class="row justify-content-center align-items-center"> <!--SECTION XS CONFIG-->
                     <div id="cabecalhoXs" class="col-11 d-sm-none"> <!--DIV CABECALHO XS-->
-                         <h1 class="bg-white border rounded">Calculador de Média </h1><!--titulo-->
+                         <div id="titleXs">
+                              <h1 class="bg-white border rounded">Calculador de Média </h1><!--titulo-->
+                         </div>
                     </div> <!--//Fim do CABEÇALHO XS-->
                     <div id="fundoInputC" class="col-11 input-group d-sm-none"><!--DIV INPUT XS-->
                          <div class="row"><!--Inicio de ROW-->
-                              <input type="number" id="cUm" min="0" max="10" class="col-3 b-azul form-control" placeholder="1º Bi">
-                              <input type="number" id="cDois" min="0" max="10" class="col-3 b-azul form-control" placeholder="2º Bi">
-                              <input type="number" id="cTres" min="0" max="10" class="col-3 b-azul form-control" placeholder="3º Bi">
-                              <input type="number" id="cQuatro" min="0" max="10" class="col-3 b-azul form-control" placeholder="4º Bi">
+                              <input type="number" id="cUm" min="0" max="10" class="col-3 azul form-control" placeholder="1º Bi">
+                              <input type="number" id="cDois" min="0" max="10" class="col-3 azul form-control" placeholder="2º Bi">
+                              <input type="number" id="cTres" min="0" max="10" class="col-3 azul form-control" placeholder="3º Bi">
+                              <input type="number" id="cQuatro" min="0" max="10" class="col-3 azul form-control" placeholder="4º Bi">
                          </div><!--//Fim do campo de digitar valores //Fim de ROW-->
                          <div class="row my-4 d-sm-none"><!--Inicio de ROW/ BUTTON com FUNCTION de calc C / Bloqueado de SM para cima-->
-                              <button onclick="calcularMediaC()" class="btn btn-primary botoes bt-azul col-8 d-block m-auto" type="button" id="calc">Calcular</button> <!--Botão principal com FUNCTION de calc C-->
+                              <button onclick="calcularMediaC(); erroInpuVazioC()" class="btn btn-primary botoes bt-azul col-8 d-block m-auto" type="button" id="calc">Calcular</button> <!--Botão principal com FUNCTION de calc C-->
                          </div><!--//Fim de ROW //Fim de BUTTON-->
                          <div class="row justify-content-center"><!--Inicio de ROW-->
-                              <input type="text" id="resultC" class="col-11 b-azulResult" disabled="disabled">
+                              <input type="text" id="resultC" class="col-11 azulResult" disabled="disabled">
                          </div> <!--//fim de ROW--> 
                     </div><!--//Fim de DIV INPUT XS-->
+                    <a href="page3.html"><h6 class="text-white autorXs d-sm-none ">By Ruyter Torres</h6> </a>  <!--autor exclusivo para XS-->                
                </section><!--//XS CONFIG- fim-->
                <section id="sm-msConfig" class=""><!-- SM/MD CONFIG -->
                     <div id="configFlexSm-md" class="row mx-0 justify-content-center"> <!-- DIN INPUT SM/MD-->
-                         <div id="cabecalhoSm-md" class="float-left item col-4 d-none d-sm-block"><!--CABECALHO SM/MD-->
+                         <div id="cabecalhoSm-md" class="float-left item col-4 d-none d-lg-none d-sm-block"><!--CABECALHO SM/MD-->
                               <h1 class="bg-white border rounded">Calculador de Média </h1><br><!--titulo-->
                               <h5 id="animarSubTitulo" class="bg-white border rounded d-none d-md-block">Boa Sorte!!!</h5><!--subtitulo/ liberado de MD pra cima-->
-                              <h6 class="text-white autor">By Ruyter Torres</h6><!--autor--> 
+                              <a href="page3.html"><h6 id="h6sm" class="text-white autor d-none d-md-none d-sm-block">By Ruyter Torres</h6><!--autor--> </a>
+                              <a href="page3.html"><h6 id="h6md" class="text-white autor d-none d-sm-none d-lg-block">By Ruyter Torres</h6><!--autor--></a>
                          </div><!--//Fim CABECALHO SM/MD-->
-                         <div id="fundoInputB" class="d-none d-sm-block d-lg-none float-right col-7">
-                              <div class="inp row input-group d-none d-sm-flex d-lg-none">
-                                   <input type="number" id="bUm" min="0" max="10" class="col-3 b-azul form-control" placeholder="1º Bi">
-                                   <input type="number" id="bDois" min="0" max="10" class="col-3 b-azul form-control" placeholder="2º Bi">
-                                   <input type="number" id="bTres" min="0" max="10" class="col-3 b-azul form-control" placeholder="3º Bi">
-                                   <input type="number" id="bQuatro" min="0" max="10" class="col-3 b-azul form-control" placeholder="4º Bi">
+                         <div id="fundoInputB" class="d-none d-sm-flex d-lg-none float-right col-7">
+                              <div class="containerForm">
+                                   <div class="inp input-group d-none d-sm-flex d-lg-none">
+                                        <input type="number" id="bUm" min="0" max="10" class="azul form-control" placeholder="1º Bi">
+                                        <input type="number" id="bDois" min="0" max="10" class=" azul form-control" placeholder="2º Bi">
+                                        <input type="number" id="bTres" min="0" max="10" class="azul form-control" placeholder="3º Bi">
+                                        <input type="number" id="bQuatro" min="0" max="10" class="azul form-control" placeholder="4º Bi">
+                                   </div>
+                                   <div class=" my-4 d-none d-sm-block d-lg-none"><!--Inicio de ROW/ BUTTON com FUNCTION de calc B / Bloqueado de SM para cima-->
+                                        <button onclick="calcularMediaB(); erroInpuVazioB()" class="btn btn-primary botoes bt-azul col-8 d-block m-auto" type="button" id="calc">Calcular</button> <!--Botão principal com FUNCTION de calc C-->
+                                   </div><!--//Fim de ROW //Fim de BUTTON-->
+                                   <div class="d-none d-sm-block d-lg-none returnResult"><!--Inicio de ROW-->
+                                        <input type="text" id="resultB" class="col-12 azulResult" disabled="disabled">
+                                   </div> <!--//fim de ROW-->
                               </div>
-                              <div class="row my-4 d-none d-sm-block d-lg-none"><!--Inicio de ROW/ BUTTON com FUNCTION de calc C / Bloqueado de SM para cima-->
-                                   <button onclick="calcularMediaB()" class="btn btn-primary botoes bt-azul col-8 d-block m-auto" type="button" id="calc">Calcular</button> <!--Botão principal com FUNCTION de calc C-->
-                              </div><!--//Fim de ROW //Fim de BUTTON-->
-                              <div class="row justify-content-center d-none d-sm-block d-lg-none"><!--Inicio de ROW-->
-                                   <input type="text" id="resultB" class="col-11 b-azulResult" disabled="disabled">
-                              </div> <!--//fim de ROW-->
                          </div>
                     </div> <!--//Fim DIV INPUT SM/MD-->
                </section><!--//Fim de SM/MD Config -->
-               <a href="page2.html"><h6 class="text-white autorXs d-sm-none ">By Ruyter Torres</h6> </a>  <!--autor exclusivo para XS-->                
+               <section id="lgConfig" class=""><!-- LG CONFIG -->
+                    <div id="configFlexLg" class="row mx-0 justify-content-center"> <!-- DIN INPUT SM/MD-->
+                         <div id="cabecalhoLg" class="float-left item col-4 d-none d-lg-block"><!--CABECALHO SM/MD-->
+                              <h1 class="bg-white border rounded">Calculador de Média </h1><br><!--titulo-->
+                              <h5 id="animarSubTitulo" class="bg-white border rounded d-none d-md-block">Boa Sorte!!!</h5><!--subtitulo/ liberado de MD pra cima-->
+                              <a href="page3.html"><h6 class="text-white autor">By Ruyter Torres</h6><!--autor--></a>
+                         </div><!--//Fim CABECALHO LG-->
+                         <div id="fundoInputA" class="d-none d-lg-flex float-right col-7">
+                              <div class="containerForm">
+                                   <div class="inp input-group d-none d-lg-flex">
+                                        <input type="number" id="aUm" min="0" max="10" class="azul form-control" placeholder="1º Bimestre">
+                                        <input type="number" id="aDois" min="0" max="10" class=" azul form-control" placeholder="2º Bimestre">
+                                        <input type="number" id="aTres" min="0" max="10" class="azul form-control" placeholder="3º Bimestre">
+                                        <input type="number" id="aQuatro" min="0" max="10" class="azul form-control" placeholder="4º Bimestre">
+                                   </div>
+                                   <div class=" my-4 d-none d-lg-block"><!--Inicio de ROW/ BUTTON com FUNCTION de calc A / Bloqueado de SM para cima-->
+                                        <button onclick="calcularMediaA(); erroInpuVazioA()" class="btn btn-primary botoes bt-azul col-8 d-block m-auto" type="button" id="calc">Calcular</button> <!--Botão principal com FUNCTION de calc C-->
+                                   </div><!--//Fim de ROW //Fim de BUTTON-->
+                                   <div class="d-none d-lg-block returnResult"><!--Inicio de ROW-->
+                                        <input type="text" id="resultA" class="col-12 azulResult" disabled="disabled">
+                                   </div> <!--//fim de ROW-->
+                              </div>
+                         </div>
+                    </div> <!--//Fim DIV INPUT LG-->
+               </section><!--//Fim de LG Config -->
           </div><!--main fim-->
           <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
           <script src="js/averagesCalculator.js"></script>

@@ -11,6 +11,18 @@ body, html {
     height:100%;
 }
 
+/* Links */
+
+.linksMenu>ul>li>a {
+    color:#fff;
+}
+
+.linksMenu>ul>li>a:hover,
+#linkPrincipal>a:hover {
+    color:#fff;
+    text-shadow: 3px 3px 5px #fff;
+    transition: 0.6s;
+}
 
 /* botões */
 
@@ -58,31 +70,31 @@ h6, h5{
 
 /* Bordas */
 
-div>input.b-azul {
+div>input.azul {
     border: 1px solid  #2146B5;
     border-radius: 4px;
 }
 
-div>input.b-azul:hover {
+div>input.azul:hover {
     box-shadow: 0 0 7.5px #007bff!important;
 }
 
-#bUm.b-azul{
+#bUm.azul{
     border-top-right-radius:0!important ;
     border-bottom-right-radius:0!important ;
 }
 
-#bDois.b-azul, #bTres.b-azul {
+#bDois.azul, #bTres.azul {
     border-radius:0!important ;
     border-radius:0!important ;
 }
 
-#bQuatro.b-azul{
+#bQuatro.azul{
     border-top-left-radius:0!important ;
     border-bottom-left-radius:0!important ;
 }
 
-.b-azulResult {
+.azulResult {
     border:1px solid #2146B5 ;
     border-radius: 4px;
     text-align: center;
@@ -130,17 +142,21 @@ div>input.b-azul:hover {
         border-top-left-radius: 10px;
         box-shadow: -5px 6px 5px #000;
         padding-top:40px;
-        height: 135px;
+        height: 175px;
         border:1px solid #007bff;
         border-bottom:none;
         background-color: #2146B5;
         background-image: url(../img/calc-white.png);
     }
 
+    #titleXs {
+        max-height: 120px ;
+    }
+
     #fundoInputC{
 
         position: fixed;
-        top: 255px;
+        top: 295px;
         background:#fff;
         padding:50px;
         margin-top:10px;
@@ -161,9 +177,9 @@ div>input.b-azul:hover {
 }
 
 /* // Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) and (max-width: 767.98px) { 
+@media (min-width: 576px) and (max-width: 991.98px) { 
     h1 {
-        font-size:1.7em;
+        font-size:2em;
     }
 
     #cabecalhoSm-md {
@@ -175,12 +191,19 @@ div>input.b-azul:hover {
         border-right:none;
         border-top-left-radius: 5px;
         border-bottom-left-radius: 5px;
-        height:250px;
+        height:20em;
         /* top: 95px;
         box-shadow: 7px 5px 5px #000; */
     }
-    
 
+    #h6sm {
+        padding-top: 12.5em;
+    }
+
+    #h6md {
+        padding-top: 9em;
+    }
+    
     #fundoInputB{
 
         top: 120px;
@@ -188,55 +211,59 @@ div>input.b-azul:hover {
         border:1px solid #007bff;
         border-top-right-radius: 5px ;
         border-bottom-right-radius: 5px ;
-        height:250px;
+        height:20em;
        /* box-shadow: -5px 5px 5px #000;
         top: 95px; */
     } 
- }
 
-/* // Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) and (max-width: 991.98px) { 
-    h1 {
-        font-size:2.3em; 
-    }
-
-    #cabecalhoSm-md {
-
-        background:#2146B5;
-        padding-top:40px;
-        border: 1px solid transparent;
-        border-right:none;
-        border-top-left-radius: 5px;
-        border-bottom-left-radius: 5px;
-        top: 95px;
-        box-shadow: 7px 5px 5px #000;
-    }
-
-    #div2 {
-        padding-top:32px;
+    .containerForm {
+        
+        display: block;
+        padding: auto;
+        margin: auto;
     }
  }
-
-/* // Large devices (desktops, 992px and up) */
-@media (min-width: 992px) and (max-width: 1199.98px) { 
-    h1 {
-        font-size:2.8em;
-    }
-    #div2 {
-        padding-top:60px;
-    }
-     h5 {
-        font-size:1em;
-    }
-}
 
 /* // Extra large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) { 
+@media (min-width: 992px) { 
     h1 {
         font-size:3em;
     }
 
     h5 {
         font-size:1.2em;
+    }
+
+    #cabecalhoLg {
+
+        top: 120px;
+        background:#2146B5;
+        padding-top:40px;
+        border: 1px solid transparent;
+        border-right:none;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+        height:20em;
+        /* top: 95px;
+        box-shadow: 7px 5px 5px #000; */
+    }
+    
+    #fundoInputA{
+
+        top: 120px;
+        background:#fff;
+        border:1px solid #007bff;
+        border-top-right-radius: 5px ;
+        border-bottom-right-radius: 5px ;
+        height:20em;
+       /* box-shadow: -5px 5px 5px #000;
+        top: 95px; */
+    } 
+
+    .containerForm {
+        
+        display: block;
+        padding: auto;
+        margin: auto;
     }
  }
