@@ -1,4 +1,4 @@
-/* Calculador de média.js v2.0
+/* Calculador de média.js v2.1
 by Ruyter Torres - FAM Online, 11/out/2020
 */
 
@@ -49,7 +49,10 @@ let aUm = ' ', aDois = ' ', aTres = ' ', aQuatro = ' '; // Variaveis
                 aUm = parseFloat(aUm)// para tranformar o valor recebido em tipo number
 
                 if(isNaN(aQuatro) || isNaN(aTres) || isNaN(aDois) || isNaN(aUm)){
-                        document.getElementById('resultA').value = ' Por favor preencha os campos acima! ';
+                        // document.getElementById('resultA').value = ' Por favor preencha os campos acima! ';
+                        document.getElementById('resultA').value = ' '
+                        alert("Po favor preencha os campos vazios")
+                        location.href = 'index.html'
                 }
         }
 
@@ -101,7 +104,10 @@ let bUm = ' ', bDois = ' ', bTres = ' ', bQuatro = ' '; // Variaveis
                 bUm = parseFloat(bUm)// para tranformar o valor recebido em tipo number
 
                 if(isNaN(bQuatro) || isNaN(bTres) || isNaN(bDois) || isNaN(bUm)){
-                        document.getElementById('resultB').value = ' Por favor preencha os campos acima! ';
+                        // document.getElementById('resultB').value = ' Por favor preencha os campos acima! ';
+                        document.getElementById('resultB').value = ' ';
+                        alert("Po favor preencha os campos vazios");
+                        location.href = 'index.html';  
                 }
         }
 
@@ -152,6 +158,8 @@ let cUm = ' ', cDois = ' ', cTres = ' ', cQuatro = ' '; // Variaveis
                 cUm = parseFloat(cUm)// para tranformar o valor recebido em tipo number
 
                 if(isNaN(cQuatro) || isNaN(cTres) || isNaN(cDois) || isNaN(cUm)){
-                        document.getElementById('resultC').value = ' Por favor preencha os campos acima! ';
-                }
+                        // document.getElementById('resultC').value = ' Por favor preencha os campos acima! ';
+                        document.getElementById('resultC').value = ' '
+                        alert("Po favor preencha os campos vazios")
+                        location.href = 'index.html'                }
         }
